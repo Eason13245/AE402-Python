@@ -32,10 +32,11 @@ while not done:
             pos = pygame.mouse.get_pos()
             click = True
             Rcount = 0
-    
+            Color = RandomColor()
+           
     screen.fill(BLACK)
     if click and Rcount < Rlimit:
-        pygame.draw.circle(screen, RandomColor(), pos, Rcount)
+        pygame.draw.circle(screen, Color, pos, Rcount)
         pygame.display.flip()
         Rcount +=1 
         if Rcount >= Rlimit:
